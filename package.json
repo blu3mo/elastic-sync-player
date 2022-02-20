@@ -26,6 +26,7 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "cp build/index.html build/404.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -47,5 +48,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "./"
+  "homepage": "https://blu3mo.github.io/elastic-sync-player/"
 }

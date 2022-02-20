@@ -46,15 +46,15 @@ function App() {
             <p>配信を遅れて視聴する際に、いい感じに早送りしてくれるプレイヤーです。</p>
             <p>遅れているほど、再生速度が速くなります。</p>
             <p>配信視聴中に巻き戻したり停止したりしても、そのうち追いつきます。</p>
-            <p>https://blu3mo.github.io/elastic/{"{配信URL}"} を開くことでその配信が表示されます。</p>
+            <p>{window.location.host}/{"{配信URL}"} を開くことでその配信が表示されます。</p>
             <ReactPlayer
                 ref={ref}
                 playing={playing}
                 controls={true}
                 playbackRate={playbackRate}
+                url={videoUrl}
                 onPlay={() => { setPlaying(true) }}
                 onPause={() => { setPlaying(false) }}
-                url={videoUrl}
             />
             <p>今の再生速度: min({maxRate}, 1 + 遅延秒数/{dividingFactor}) = <b>{playbackRate}</b></p>
         </>
